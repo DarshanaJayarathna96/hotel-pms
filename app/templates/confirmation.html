@@ -1,0 +1,22 @@
+<!-- app/templates/confirmation.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='confirmation_styles.css') }}">
+</head>
+<body>
+    <h1>Booking Confirmed!</h1>
+    <p>Your confirmation number is: <strong>{{ confirmation_number }}</strong></p>
+
+    <!-- View Invoice Button -->
+    <a href="{{ url_for('invoice', confirmation_number=confirmation_number) }}" class="view-invoice-button">
+        View Invoice
+    </a>
+
+    <br>
+    <a class="home-link" href="{{ url_for('index') }}">Go back to Home</a>
+</body>
+</html>

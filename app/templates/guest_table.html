@@ -1,0 +1,51 @@
+<!-- app/templates/guest_table.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Table</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='guest_styles.css') }}"> <!-- Link to new CSS file -->
+</head>
+<body>
+    <h1>Guest List</h1>
+
+    <!-- Guest table -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Check In</th>
+                <th>Check Out</th>
+                <th>Room Number</th>
+                <th>Payment Status</th>
+                <th>Amount Due</th>
+                <th>Confirmation Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for guest in guests %}
+            <tr>
+                <td>{{ guest.id }}</td>
+                <td>{{ guest.first_name }}</td>
+                <td>{{ guest.last_name }}</td>
+                <td>{{ guest.email }}</td>
+                <td>{{ guest.phone }}</td>
+                <td>{{ guest.check_in }}</td>
+                <td>{{ guest.check_out }}</td>
+                <td>{{ guest.room_number }}</td>
+                <td>{{ guest.payment_status }}</td>
+                <td>{{ guest.amount_due }}</td>
+                <td>{{ guest.confirmation_number }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

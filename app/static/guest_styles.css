@@ -1,0 +1,55 @@
+/* app/static/css/guest_styles.css */
+
+/* Styles for the guest table */
+body {
+    font-family: Arial, sans-serif; /* Sets a clean font for the page */
+    background-color: #f9f9f9; /* Light background for the page */
+    color: #333; /* Dark text color for contrast */
+    margin: 20px; /* Adds margin around the body */
+}
+
+h1 {
+    text-align: center; /* Centers the header */
+    color: #4CAF50; /* Green color for the header */
+}
+
+table {
+    width: 100%; /* Full width for the table */
+    border-collapse: collapse; /* Collapses table borders */
+    margin-top: 20px; /* Space above the table */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a slight shadow to the table */
+}
+
+th, td {
+    padding: 12px; /* Padding for cells */
+    text-align: left; /* Left-aligns text in cells */
+    border: 1px solid #ddd; /* Light border around cells */
+}
+
+thead {
+    background-color: #4CAF50; /* Dark green background for the header */
+    color: white; /* White text for header */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for even rows */
+}
+
+tbody tr:hover {
+    background-color: #d1e7dd; /* Light green background on row hover */
+}
+
+a {
+    display: inline-block; /* Makes link a block element for easier clicking */
+    margin-top: 20px; /* Space above the link */
+    padding: 10px 15px; /* Padding for the link */
+    background-color: #007bff; /* Blue background for the link */
+    color: white; /* White text */
+    text-decoration: none; /* No underline for the link */
+    border-radius: 4px; /* Rounds the corners */
+    text-align: center; /* Center the text in the link */
+}
+
+a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

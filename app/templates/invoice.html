@@ -1,0 +1,25 @@
+<!-- app/templates/invoice.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='invoice_styles.css') }}">
+</head>
+<body>
+    <h1>Invoice</h1>
+    <p>Guest: <strong>{{ guest.first_name }} {{ guest.last_name }}</strong></p>
+    <p>Room Number: <strong>{{ guest.room_number }}</strong></p>
+    <p>Check-in Date: <strong>{{ guest.check_in }}</strong></p>
+    <p>Check-out Date: <strong>{{ guest.check_out }}</strong></p>
+    <p>Total Amount Due: <strong>${{ guest.amount_due }}</strong></p>
+    <p>Payment Status: <strong>{{ guest.payment_status }}</strong></p>
+
+    <button class="print-button" onclick="window.print()">Print Invoice</button>
+
+    <!-- Go Back Home Button -->
+    <br>
+    <a class="home-link" href="{{ url_for('index') }}">Go Back Home</a>
+</body>
+</html>
